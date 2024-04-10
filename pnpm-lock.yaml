@@ -14,6 +14,9 @@ dependencies:
   '@mui/material':
     specifier: ^5.15.14
     version: 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(react-dom@18.2.0)(react@18.2.0)
+  '@mui/system':
+    specifier: ^5.15.15
+    version: 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.17.0
     version: 5.17.0
