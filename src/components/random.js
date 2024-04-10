@@ -84,6 +84,9 @@ const Random = () => {
         setRandomOutfit(getRandomNumber(1, 75));
         setRandomShoes(getRandomNumber(1, 75));
         setRandomBackground(getRandomNumber(1, 8));
+        if (index > names.length - 1) {
+            setIndex(0);
+        }
         if (value !== "") {
             if (value.length < 1 || value.length > 15) {
                 setError("Name should be between 1 and 15 characters");
