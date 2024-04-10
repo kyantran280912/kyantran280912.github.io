@@ -79,14 +79,12 @@ const Random = () => {
     const [error, setError] = useState("");
 
     const randomImage = () => {
+        console.log(index, names.length);
         setRandomBody(getRandomNumber(1, 4));
         setRandomHair(getRandomNumber(1, 75));
         setRandomOutfit(getRandomNumber(1, 75));
         setRandomShoes(getRandomNumber(1, 75));
         setRandomBackground(getRandomNumber(1, 8));
-        if (index > names.length - 1) {
-            setIndex(0);
-        }
         if (value !== "") {
             if (value.length < 1 || value.length > 15) {
                 setError("Name should be between 1 and 15 characters");
@@ -96,9 +94,13 @@ const Random = () => {
             // setIndex(names.length - 1);
         } else {
             setIndex(index + 1);
+            if (index > names.length - 1) {
+                setIndex(0);
+            }
         }
         setValue("");
     };
+    console.log(index);
 
     const getImage = () => {
         let node = document.getElementById("my-node");
